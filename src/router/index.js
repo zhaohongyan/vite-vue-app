@@ -9,13 +9,15 @@ import UserAdd from '@/page/user/add.vue';
 import UserEdit from '@/page/user/edit.vue';
 import UserDetail from '@/page/user/detail.vue';
 
+
+// todolist
+import TodoList from '@/page/todoList/index.vue'
 import NotFound from '@/page/404.vue'
 
 const routes = [
-  { path: '/', redirect: '/login', name: '' },
+  { path: '/', redirect: '/todo', name: '' },
   { path: '/login', component: LoginView, name: 'login' },
   { path: '/home', component: HomeView, name: 'home' },
-
   {
     path: '/user', component: UserIndex,
     children: [
@@ -33,6 +35,9 @@ const routes = [
       }
     ]
   },
+  {
+   path: '/todo',component: TodoList
+  }
   // { path: '/404', component: NotFound},
   // { path: '/:pathMatch(.*)', redirect: '/404'}
 ]
