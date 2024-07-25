@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <title>template</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    :root {
+      --hy-white: #fff;
+      --hy-color-primary: rgba(255, 255, 255, 0.5);
+    }
+    p {
+      font-size: 12px;
+    }
+ 
+    main {
+      background-color: #da7c3a;
+      display: flex;
+      height: 100vh;
+      color: #fff;
+    }
+
+    .left {
+      flex: 1;
+      padding: 20px 40px;
+
+    }
+
+    .logo {
+      margin-bottom: 40px;
+    }
+
+    input {
+      width: calc(100% - 40px);
+      line-height: 32px;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      outline: none;
+      background: transparent;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 24px;
+      color: #fff;
+    }
+    input:focus {
+      color: var(--hy-white);
+    }
+
+    input::placeholder {
+      color: var(--hy-color-primary);
+    }
+
+    .tips {
+      margin-bottom: 24px;
+    }
+    .desc {
+      color: var(--hy-color-primary);
+      font-size: 12px;
+      padding-left: 10px;
+    }
+
+    .right {
+      width: 60%;
+      background-image: url('./bg.jpg');
+      background-size: contain;
+      background-position: top right;
+      background-repeat: no-repeat;
+    }
+  </style>
 </head>
+
 <body>
-  <div>hello template</div>
+  <main>
+    <div class="left">
+      <div class="logo">
+        <img src="./logo.jpg" width="300" />
+      </div>
+
+      <h1>Welcome to FWD Guest WiFi</h1>
+      <p>Please complete the form below to gain access to the network.</p>
+      <p class="tips">* Required Field</p>
+
+      <form>
+
+        <input name="name" id="name" required
+          placeholder="*Name of the person sponsoring this account." />
+
+          <input type="email" name="email" id="email" required
+          placeholder="*Email of the person sponsoring this account." />
+
+          <input  name="fullName" id="fullName" required
+          placeholder="*Please enter your full name" />
+
+          <input  name="companyName" id="companyName" required
+          placeholder="*Please enter your company name." />
+
+          <input  name="email2" id="email2" required
+          placeholder="*Please enter your email address." />
+        <div class="desc">This will become your username to log into the network.</div>
+
+      </form>
+
+    </div>
+    <div class="right"></div>
+  </main>
 </body>
+
 </html>
